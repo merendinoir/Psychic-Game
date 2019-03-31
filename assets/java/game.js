@@ -1,45 +1,37 @@
-// list of letters
 var letterList = [
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l','m', 'n', 'o', 'p', 'q', 'r','s', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-// list of incorrect guesses
-var incorrectGuesses = [];
+var wrongGuesses = [];
 
-// other variables
-var secretLetter = null;
+var letter = null;
 var wins = 0;
 var losses = 0;
-var guessesRemaining = 0;
-// var myGuess = null;
+var guesses = 0;
 
-// reset game state and assign a new secret
 function reset() {
-    guessesRemaining = 10;
-    incorrectGuesses = [];
-    secretLetter = letterList[Math.floor(Math.random() * letterList.length)];
-
-    // for testing
-    console.log('The secret letter is: ' + secretLetter);
+    guesses = 10;
+    wrongGuesses = [];
+    letter = letterList[Math.floor(Math.random() * letterList.length)];
+    console.log('The letter is: ' + letter);
 }
 
-// update display
 function updateDisplay() {
     $('.winCount').text(wins);
     $('.lossCount').text(losses);
-    $('.guessesLeft').text(guessesRemaining);
-    $('.yourGuesses').text(incorrectGuesses.join(' '));
+    $('.guessesLeft').text(guesses);
+    $('.yourGuesses').text(wrongGuesses.join(' '));
 }
 
-// game play
+// onkeyup fxn
 document.onkeyup = function (event) {
-    var guess = String.fromCharCode(event.keyCode).toLowerCase();
-    if (guess == secretLetter) {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    if (userGuess == letter) {
         wins++;
         reset();
     } else {
-        guessesRemaining--;
-        incorrectGuesses.push(guess);
-        if( guessesRemaining <= 0) {
+        guesses--;
+        wrongGuesses.push(userGuess);
+        if( guesses <= 0) {
             losses++;
             reset();
         }
@@ -47,6 +39,5 @@ document.onkeyup = function (event) {
     updateDisplay();
 }
 
-// initial set 
 reset();
 updateDisplay();

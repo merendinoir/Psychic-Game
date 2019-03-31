@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The Psychic Game</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Psychic Game</title>
+    
+<link rel="stylesheet" href="Assets/css/reset.css">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./Assets/CSS/reset.css">
-  <link rel="stylesheet" type="text/css" href="./Assets/CSS/Psychic.css">
-  <script src="./Assets/Javascript/Psychic.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
 
-</head>
-<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<div class="container.fluid">
-  <div class="row">
-    <h1 class="col-md-12">The Psychic Game</h1>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+  <div class="conatiner-fluid">
+      <div class="row">
+          <div class="header">
+              <h1 style="text-align: center">Psychic Game</h1>
+          </div>
+      </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12 jumbotron">
-      <h3>Try to guess the correct letter that has been chosen! Pick any letter from A -Z </h3>
-    <br>
-      <h2>Are you Psychic?</h2>
+  <div class="container-fluid">
+      <div class="row">
+          <div class="jumbotron main">
+              <div class="instuctions" style="text-align: center">
+                  <h3>Try to guess the correct letter that has been chosen! </h3> <br>
+                  <h4>Pick any letter from A -Z</h4>
+                  <br>
+                  <h3>Are you Psychic?</h3>
+              </div>
+      </div>
+  <div class="container-fluid" style="text-align:center"> 
+      <div class="row">
+              <div class="wins">
+                  <span>Wins: </span>
+                  <span class="winCount">placeholder</span>
+              </div>
+              <div class="losses">
+                  <span>Losses: </span>
+                  <span class="lossCount">placeholder</span>
+              </div>
+              <div class="guesses">
+                  <span>Guesses remaining: </span>
+                  <span class="guessesLeft">placeholder</span>
+              </div>
+              <div>
+                  <span>Your Guesses: </span>
+                  <span class="yourGuesses">placeholder</span>
+              </div>
+          </div>
+      </div>
+
     </div>
-  </div>
+      
+      <script src="assets/java/game.js">
 
-  <div class="row">
-    <span>Wins: </span>
-    <span class="">placeholder</span>
-  </div>
-
-  <div class="row">
-    <span>Losses: </span>
-    <span class="">placeholder</span>
-  </div>
-
-  <div class="row">
-    <span>Guesses remaining: </span>
-    <span class="">placeholder</span>
-  </div>
-
-  <div class="row">
-    <span>Your Guesses: </span>
-    <span class="">placeholder</span>
-  </div>
-
-</div>
-
-
-<script src="assets/game.js">
-
-</script>
-
-</body>
+      </script>
+  </body>
 </html>
